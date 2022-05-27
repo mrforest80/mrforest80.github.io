@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lib/bootstrap.min.css">
+
+    <title>Másodfokú egyenlet megoldóképlet</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <h5 style="margin-left: 20px; margin-bottom: 20px;">Másodfokú egyenlet: </h5>
+                <div>
+                    <img src="pic/egyenlet.svg" alt="egyenlet" 
+                    style="margin-bottom: 10px; border: solid 1px">
+                </div>
+                <h5 style="margin-left: 20px; margin-bottom: 20px;">Megoldóképlet:</h5>
+                <div>
+                    <img src="pic/keplet.svg" alt="Képlet"
+                        style="margin-left: 25px; margin-bottom: 10px; border: solid 1px">
+                </div>
+                <form>
+                    <div class="mb-3 form-group">
+                        <label for=""><strong>a= </strong> </label>
+                        <input type="number" name="a" class="from-control">
+                    </div>
+                    <div class="mb-3 form-group">
+                        <label for=""><strong>b= </strong> </label>
+                        <input type="number" name="b" class="from-control">
+                    </div>
+                    <div class="mb-3 form-group">
+                        <label for=""><strong>c= </strong> </label>
+                        <input type="number" name="c" class="from-control">
+                    </div>
+                    <button onclick="clickBtn()" type="button" class="btn btn-primary">Kiszámol</button>
+                    <div class="Form-group" id="disc" style="display: none;">
+                        <strong> Diszkrimináns = <span class="show-disc"></span></strong>
+                    </div>
+                    <div class="Form-group" id="hideX1" style="display: none;">
+                        <strong> X<sub>1</sub> = <span class="show-x1"></span></strong>
+                    </div>
+                    <div class="Form-group" id="hideX2" style="display: none;">
+                        <strong> X<sub>2</sub> = <span class="show-x2"></span></strong>
+                    </div>
+                </form>
+            </div>
+            <div class="col-3">
+                <h5>Variációk:</h5>
+                <p>D<sub>negatív</sub> = a=2 b=2 c=8</p>
+                <p>D < 0 esetén nincs megoldása a valós számok között.</p><br>
+                <p>D<sub>nulla</sub> = a=2 b=4 c=2</p>
+                <p>D = 0 esetén két egyenlő (kettős gyöke) van. X<sub>1</sub>=X<sub>2</sub> </p><br>
+                <p>D<sub>pozitív</sub> = a=2 b=8 c=2</p>
+                <p>D > 0 esetén két különböző valós gyöke van.</p>
+            </div>
+
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
