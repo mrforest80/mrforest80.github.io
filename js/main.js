@@ -30,6 +30,11 @@ function checkInput(aNum, bNum, cNum) {
     } else {
         calcDisc(aNum, bNum, cNum);
     }
+    if (isNaN(aNum) || isNaN(bNum) || isNaN(cNum)) {
+        alert("Minden mezőnek adj értéket!");
+    } else {
+        calcDisc(aNum, bNum, cNum);
+    }
 }
 
 function calcDisc(aNum, bNum, cNum) {
@@ -46,11 +51,15 @@ function calcDisc(aNum, bNum, cNum) {
         discRim = discRim + ": Diszkrimináns negatív, a valós számok halmazában nincs megoldás!";
         showDisc.innerHTML = discRim;
     } else {
-        discRim = discRim;
         let disc = document.getElementById("disc");
         disc.style.display = "block";
-        showDisc.innerHTML = discRim;
-        total(aNum, bNum, discRim);
+        if (isNaN(discRim)) {
+            disc.style.display = "none";
+        } else {
+            showDisc.innerHTML = discRim;
+            total(aNum, bNum, discRim);
+        }
+
     }
 }
 
