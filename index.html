@@ -13,7 +13,7 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-3">
+            <div class="col-sm">
                 <h5 style="margin-left: 20px; margin-bottom: 20px;">Másodfokú egyenlet: </h5>
                 <div>
                     <img src="pic/egyenlet.svg" alt="egyenlet" 
@@ -25,31 +25,31 @@
                         style="margin-left: 25px; margin-bottom: 10px; border: solid 1px">
                 </div>
                 <form>
-                    <div class="mb-3 form-group">
+                    <div class="form-group">
                         <label for=""><strong>a= </strong> </label>
                         <input type="number" name="a" id="a" class="from-control">
                     </div>
-                    <div class="mb-3 form-group">
+                    <div class="form-group">
                         <label for=""><strong>b= </strong> </label>
                         <input type="number" name="b" id="b" class="from-control">
                     </div>
-                    <div class="mb-3 form-group">
+                    <div class="form-group">
                         <label for=""><strong>c= </strong> </label>
                         <input type="number" name="c" id="c" class="from-control">
                     </div>
                     <button onclick="clickBtn()" type="button" class="btn btn-primary" id="btn">Kiszámol</button>
-                    <div class="Form-group" id="disc" style="display: none;">
+                    <div class="Form-group" id="disc" style="visibility: hidden;">
                         <strong> Diszkrimináns = <span class="show-disc"></span></strong>
                     </div>
-                    <div class="Form-group" id="hideX1" style="display: none;">
+                    <div class="Form-group" id="hideX1" style="visibility: hidden;">
                         <strong> X<sub>1</sub> = <span class="show-x1"></span></strong>
                     </div>
-                    <div class="Form-group" id="hideX2" style="display: none;">
+                    <div class="Form-group" id="hideX2" style="visibility: hidden;">
                         <strong> X<sub>2</sub> = <span class="show-x2"></span></strong>
                     </div>
                 </form>
             </div>
-            <div class="col-3">
+            <div class="col-sm">
                 <h5>Variációk:</h5>
                 <p>D<sub>negatív</sub> = a=2 b=2 c=8</p>
                 <p>D < 0 esetén nincs megoldása a valós számok között.</p><br>

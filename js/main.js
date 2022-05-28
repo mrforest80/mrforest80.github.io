@@ -1,10 +1,10 @@
 function clickBtn() {
     let disc = document.getElementById("disc");
-    disc.style.display = "none";
+    disc.style.visibility = "hidden";
     let hideId1 = document.getElementById("hideX1");
-    hideId1.style.display = "none";
+    hideId1.style.visibility = "hidden";
     let hideId2 = document.getElementById("hideX2");
-    hideId2.style.display = "none";
+    hideId2.style.visibility = "hidden";
     dataIn();
 }
 
@@ -45,13 +45,13 @@ function calcDisc(aNum, bNum, cNum) {
 
     if (discRim < 0) {
         let disc = document.getElementById("disc");
-        disc.style.display = "block";
+        disc.style.visibility = "inherit";
         discRim = discRim + ": Diszkrimináns negatív, a valós számok halmazában nincs megoldás!";
         showDisc.innerHTML = discRim;
         return;
     } else {
         let disc = document.getElementById("disc");
-        disc.style.display = "block";
+        disc.style.visibility = "inherit";
         showDisc.innerHTML = discRim;
         total(aNum, bNum, discRim);
     }
@@ -62,14 +62,14 @@ function total(aNum, bNum, discRim) {
     let showXOne = document.querySelector("span.show-x1")
     let xOne = ((-1 * bNum + Math.sqrt(discRim)) / (2 * aNum));
     let hideId1 = document.getElementById("hideX1");
-    hideId1.style.display = "block";
+    hideId1.style.visibility = "inherit";
     xOne = xOne.toFixed(3);
     showXOne.innerHTML = xOne;
 
     let showXTwo = document.querySelector("span.show-x2")
     let xTwo = ((-1 * bNum - Math.sqrt(discRim)) / (2 * aNum));
     let hideId2 = document.getElementById("hideX2");
-    hideId2.style.display = "block";
+    hideId2.style.visibility = "inherit";
     xTwo = xTwo.toFixed(3);
     showXTwo.innerHTML = xTwo;
 }
