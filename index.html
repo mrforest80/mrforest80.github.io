@@ -27,17 +27,17 @@
                 <form>
                     <div class="mb-3 form-group">
                         <label for=""><strong>a= </strong> </label>
-                        <input type="number" name="a" class="from-control">
+                        <input type="number" name="a" id="a" class="from-control">
                     </div>
                     <div class="mb-3 form-group">
                         <label for=""><strong>b= </strong> </label>
-                        <input type="number" name="b" class="from-control">
+                        <input type="number" name="b" id="b" class="from-control">
                     </div>
                     <div class="mb-3 form-group">
                         <label for=""><strong>c= </strong> </label>
-                        <input type="number" name="c" class="from-control">
+                        <input type="number" name="c" id="c" class="from-control">
                     </div>
-                    <button onclick="clickBtn()" type="button" class="btn btn-primary">Kiszámol</button>
+                    <button onclick="clickBtn()" type="button" class="btn btn-primary" id="btn">Kiszámol</button>
                     <div class="Form-group" id="disc" style="display: none;">
                         <strong> Diszkrimináns = <span class="show-disc"></span></strong>
                     </div>
@@ -62,6 +62,29 @@
         </div>
     </div>
     <script src="js/main.js"></script>
+    <script>
+        let inputA = document.getElementById("a");
+        inputA.addEventListener("keypress", function(event) {
+          if (event.key === "Enter") {
+            event.preventDefault();
+            document.getElementById("btn").click();
+          }
+        });
+        let inputB = document.getElementById("b");
+        inputB.addEventListener("keypress", function(event) {
+          if (event.key === "Enter") {
+            event.preventDefault();
+            document.getElementById("btn").click();
+          }
+        });
+        let inputC = document.getElementById("c");
+        inputC.addEventListener("keypress", function(event) {
+          if (event.key === "Enter") {
+            event.preventDefault();
+            document.getElementById("btn").click();
+          }
+        });
+        </script>
 </body>
 
 </html>
