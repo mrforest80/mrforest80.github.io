@@ -27,14 +27,16 @@ function checkInput(aNum, bNum, cNum) {
 
     if (aNum == 0) {
         alert("Ha a=0, akkor ez nem másodfokú egyenlet!");
+        return;
     } else {
-        calcDisc(aNum, bNum, cNum);
+        if (isNaN(aNum) || isNaN(bNum) || isNaN(cNum)) {
+            alert("Minden mezőnek adj értéket!");
+            return;
+        } else {
+            calcDisc(aNum, bNum, cNum);
+        }
     }
-    if (isNaN(aNum) || isNaN(bNum) || isNaN(cNum)) {
-        alert("Minden mezőnek adj értéket!");
-    } else {
-        calcDisc(aNum, bNum, cNum);
-    }
+
 }
 
 function calcDisc(aNum, bNum, cNum) {
@@ -50,11 +52,13 @@ function calcDisc(aNum, bNum, cNum) {
         hideId2.style.display = "none";
         discRim = discRim + ": Diszkrimináns negatív, a valós számok halmazában nincs megoldás!";
         showDisc.innerHTML = discRim;
+        return;
     } else {
         let disc = document.getElementById("disc");
         disc.style.display = "block";
         if (isNaN(discRim)) {
             disc.style.display = "none";
+            return;
         } else {
             showDisc.innerHTML = discRim;
             total(aNum, bNum, discRim);
